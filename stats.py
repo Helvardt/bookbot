@@ -3,10 +3,8 @@ def get_book_text(filepath):
         file_contents = f.read()
     return file_contents
 
-book = "books/frankenstein.txt"
 
 def num_chars(book):
-    book = "books/frankenstein.txt"
     char_list = {}
     text = get_book_text(book)
     text_lowerCase = text.lower()
