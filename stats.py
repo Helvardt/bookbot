@@ -11,13 +11,7 @@ def num_chars(book):
     #create dictionary
     #for each character in text
     for char in text_lowerCase:
-        #make lowercase
-        char.lower()
-        #if character already in list add 1 to value
-        if char not in char_list:
-            char_list[char] = 1
-        else:
-            char_list[char] += 1    
+        char_list[char] = char_list.get(char, 0) + 1     
     return char_list
 
 def num_words(book):
