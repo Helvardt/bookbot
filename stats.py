@@ -19,15 +19,10 @@ def num_chars(book):
 def sort_on(items):
     return items["num"]
 
-def sorted_dictionary(dictionary):
-    book = "books/frankenstein.txt"
+def sorted_dictionary(counts):
     new_list = []
-    unsorted_dict = num_chars(book)
-    for key in unsorted_dict:
-        if key not in new_list:
-            new_list.append({"char": key, "num": unsorted_dict[key]})
-        else:
-            continue
+    for key in counts:
+        new_list.append({"char": key, "num": counts[key]})
     new_list.sort(reverse=True, key=sort_on)
     return new_list
     
